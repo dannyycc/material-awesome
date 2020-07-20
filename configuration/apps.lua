@@ -8,19 +8,19 @@ local rofi_command = 'env /usr/bin/rofi -dpi ' .. get_dpi() .. ' -width ' .. wit
 return {
   -- List of apps to start by default on some actions
   default = {
-    terminal = 'terminator',
+    terminal = 'konsole',
     rofi = rofi_command,
     lock = 'i3lock-fancy',
     quake = 'terminator',
     screenshot = '~/.config/awesome/configuration/utils/screenshot -m',
     region_screenshot = '~/.config/awesome/configuration/utils/screenshot -r',
     delayed_screenshot = 'sleep 10 ; ~/.config/awesome/configuration/utils/screenshot -r',
-    browser = 'brave-browser-nightly',
+    browser = 'brave',
     editor = 'code', -- gui text editor, but can use xed
-    social = 'discord',
+    social = 'flatpak run com.discordapp.Discord',
     game = rofi_command,
-    files = 'nemo',
-    music = 'spotify' 
+    files = 'dolphin',
+    music = 'flatpak run com.spotify.Client' 
   },
   -- List of apps to start once on start-up
   run_on_start_up = {
@@ -30,9 +30,10 @@ return {
     --'blueberry-tray', -- Bluetooth tray icon
     'ibus-daemon --xim', -- Ibus daemon for keyboard
     'numlockx on', -- enable numlock
+    'redshift',
     '/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 & eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg)', -- credential manager
+    '/usr/lib/polkit-kde-authentication-agent-1 & eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg)',
     'xscreensaver -nosplash', -- Power manager
-    'protonvpn-tray',
     '~/.local/bin/wallpaper', -- wallpaper-reddit script
     -- Add applications that need to be killed between reloads
     -- to avoid multipled instances, inside the awspawn script

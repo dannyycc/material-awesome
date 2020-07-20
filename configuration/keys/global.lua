@@ -347,6 +347,7 @@ local globalKeys =
     {description = 'open default program for tag/workspace', group = 'tag'}
   ),
   -- Custom hotkeys
+      
   -- vfio integration
   awful.key(
     {'Control',altkey},
@@ -368,7 +369,7 @@ local globalKeys =
     {modkey},
     'm',
     function()
-      awful.util.spawn_with_shell('gnome-system-monitor')
+      awful.util.spawn_with_shell('ksysguard')
     end
   ),
   -- Kill VLC
