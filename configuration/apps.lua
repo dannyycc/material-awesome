@@ -30,6 +30,7 @@ return {
     --'blueberry-tray', -- Bluetooth tray icon
     'ibus-daemon --xim', -- Ibus daemon for keyboard
     'numlockx on', -- enable numlock
+    'flatpak run com.discordapp.Discord',
     'redshift',
     '/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 & eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg)', -- credential manager
     '/usr/lib/polkit-kde-authentication-agent-1 & eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg)',
