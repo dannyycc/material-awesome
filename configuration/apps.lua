@@ -12,9 +12,11 @@ return {
     rofi = rofi_command,
     lock = 'i3lock-fancy',
     quake = 'terminator',
-    screenshot = '~/.config/awesome/configuration/utils/screenshot -m',
-    region_screenshot = '~/.config/awesome/configuration/utils/screenshot -r',
+    -- screenshot = '~/.config/awesome/configuration/utils/screenshot -m',
+    -- region_screenshot = '~/.config/awesome/configuration/utils/screenshot -r',
     delayed_screenshot = 'sleep 10 ; ~/.config/awesome/configuration/utils/screenshot -r',
+    region_screenshot = 'sharenix-section',
+    screenshot = 'sharenix-window',
     browser = 'brave',
     editor = 'code', -- gui text editor, but can use xed
     social = 'flatpak run com.discordapp.Discord',
@@ -29,8 +31,10 @@ return {
     'pa-applet', -- shows an audiocontrol applet in systray when installed.
     --'blueberry-tray', -- Bluetooth tray icon
     'ibus-daemon --xim', -- Ibus daemon for keyboard
-    'numlockx on', -- enable numlock
+    -- 'numlockx on', -- enable numlock
     'flatpak run com.discordapp.Discord',
+    'flatpak run com.spotify.Client',
+    'flameshot',                 
     'redshift',
     '/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 & eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg)', -- credential manager
     '/usr/lib/polkit-kde-authentication-agent-1 & eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg)',
